@@ -79,3 +79,14 @@ if data is not None:
     if st.checkbox('Clean empty columns'):
         df = df.dropna(axis=1, how='all')
         st.write(df)
+
+
+    # Show heatmap
+    if st.checkbox('Show heatmap'):
+        fig, ax = plt.subplots()
+        sns.heatmap(df.corr(), annot=True, cmap='coolwarm', ax=ax)
+        st.pyplot(fig)
+
+
+
+
