@@ -81,12 +81,6 @@ if data is not None:
         st.write(df)
 
 
-    # Show heatmap
-    if st.checkbox('Show heatmap'):
-        fig, ax = plt.subplots()
-        sns.heatmap(df.corr(), annot=True, cmap='coolwarm', ax=ax)
-        st.pyplot(fig)
-
 
 
 
